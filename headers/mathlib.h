@@ -1,3 +1,5 @@
+#include "stdint.h"
+
 class Vector {
     float x, y, z;
 };
@@ -17,4 +19,8 @@ class QuaternionAligned : Quaternion {
 class alignas(16) CTransform {
     VectorAligned m_vPosition;
     QuaternionAligned m_orientation;
+};
+
+class QAngle {
+    float x, y, z;  
 };
